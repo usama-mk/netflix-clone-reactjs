@@ -1,25 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Row from './Components/Row';
+import requests from './requests';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Netflix clone</h1>
+      <Row title="Netflix Trending" fetchUrl={requests.fetchTrending} />
+      <Row title= "Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} />
     </div>
   );
 }
+// netflix-clone-reactjs-da6a6.web.app
 
 export default App;
